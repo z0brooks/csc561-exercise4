@@ -537,8 +537,8 @@ function main() {
     fillPoly(imagedata,poly);
 
     // Add second poly
-    projectPoly(imagedata,poly2,view);
-    fillPoly(imagedata,poly2);
+    //projectPoly(imagedata,poly2,view);
+    //fillPoly(imagedata,poly2);
     
     context.putImageData(imagedata, 0, 0); // display the image in the context
 }
