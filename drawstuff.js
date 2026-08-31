@@ -512,7 +512,6 @@ function main() {
     var w = context.canvas.width; // as set in html
     var h = context.canvas.height;  // as set in html
     var imagedata = context.createImageData(w,h);
-    var imagedata2 = context.createImageData(w,h);
     
     // define polygon and view
     var testEye = new Vector(0,0,0);
@@ -532,8 +531,8 @@ function main() {
     fillPoly(imagedata,poly);
 
     // Add second poly
-    projectPoly(imagedata2,poly2,view);
-    fillPoly(imagedata2,poly2);
+    projectPoly(imagedata,poly2,view);
+    fillPoly(imagedata,poly2);
     
     context.putImageData(imagedata, 0, 0); // display the image in the context
 }
