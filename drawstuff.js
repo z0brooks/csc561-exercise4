@@ -521,10 +521,10 @@ function main() {
                 {x:5,y:5,z:10,c:new Color(0,255,0,255)},
                 {x:10,y:0,z:10,c:new Color(255,0,0,255)}, 
                 {x:5,y:-5,z:10,c:new Color(0,0,255,255)}];
-    var poly2 = [{x:0,y:-6,z:5,c:new Color(0,0,0,255)}, 
-                {x:5,y:-1,z:5,c:new Color(0,255,0,255)},
-                {x:10,y:-6,z:10,c:new Color(255,0,0,255)}, 
-                {x:5,y:-11,z:10,c:new Color(0,0,255,255)}];
+    var poly2 = [{x:5,y:12,z:5,c:new Color(0,0,0,255)}, 
+                {x:8,y:9,z:5,c:new Color(0,255,0,255)},
+                {x:5,y:6,z:10,c:new Color(255,0,0,255)}, 
+                {x:2,y:9,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
