@@ -512,6 +512,7 @@ function main() {
     var w = context.canvas.width; // as set in html
     var h = context.canvas.height;  // as set in html
     var imagedata = context.createImageData(w,h);
+    var imagedata2 = context.createImageData(w,h);
     
     // define polygon and view
     var testEye = new Vector(0,0,0);
@@ -521,13 +522,18 @@ function main() {
                 {x:5,y:5,z:10,c:new Color(0,255,0,255)},
                 {x:10,y:0,z:10,c:new Color(255,0,0,255)}, 
                 {x:5,y:-5,z:10,c:new Color(0,0,255,255)}];
+    var poly2 = [{x:0,y:-6,z:0,c:new Color(0,0,0,255)}, 
+                {x:5,y:-1,z:0,c:new Color(0,255,0,255)},
+                {x:10,y:-6,z:10,c:new Color(255,0,0,255)}, 
+                {x:5,y:-11,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
     fillPoly(imagedata,poly);
 
-    //projectPoly(imagedata,poly2,view);
-    //fillPoly(imagedata,poly2);
+    // Add second poly
+    projectPoly(imagedata2,poly2,view);
+    fillPoly(imagedata2,poly2);
     
     context.putImageData(imagedata, 0, 0); // display the image in the context
 }
