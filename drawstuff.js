@@ -521,15 +521,16 @@ function main() {
                 {x:5,y:5,z:10,c:new Color(0,255,0,255)},
                 {x:10,y:0,z:10,c:new Color(255,0,0,255)}, 
                 {x:5,y:-5,z:10,c:new Color(0,0,255,255)}];
-    var poly2 = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, 
-                {x:5,y:-5,z:10,c:new Color(0,255,0,255)}, 
-                {x:5,y:-15,z:10,c:new Color(0,0,0,255)}, 
-                {x:-5,y:-15,z:10,c:new Color(0,0,255,255)}];
-    var poly3 = [{x:-5,y:10,z:10,c:new Color(255,0,0,255)}, 
-                {x:5,y:15,z:10,c:new Color(255,255,0,255)}, 
-                {x:5,y:10,z:10,c:new Color(255,0,0,255)}, 
-                {x:-5,y:5,z:10,c:new Color(255,0,255,255)}];
-    
+    //var poly2 = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, 
+      //          {x:5,y:-5,z:10,c:new Color(0,255,0,255)}, 
+        //        {x:5,y:-15,z:10,c:new Color(0,0,0,255)}, 
+          //      {x:-5,y:-15,z:10,c:new Color(0,0,255,255)}];
+    //var poly3 = [{x:-5,y:10,z:10,c:new Color(255,0,0,255)}, 
+      //          {x:5,y:15,z:10,c:new Color(255,255,0,255)}, 
+        //        {x:5,y:10,z:10,c:new Color(255,0,0,255)}, 
+          //      {x:-5,y:5,z:10,c:new Color(255,0,255,255)}];
+    var poly2 = [{x:-5,y:5,z:10,c:new Color(255,0,0,255)}, {x:5,y:5,z:10,c:new Color(0,255,0,255)}, 
+                {x:5,y:-5,z:10,c:new Color(0,0,0,255)}, {x:-5,y:-5,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
@@ -538,8 +539,6 @@ function main() {
     // Add second poly
     projectPoly(imagedata,poly2,view);
     fillPoly(imagedata,poly2);
-    projectPoly(imagedata,poly3,view);
-    fillPoly(imagedata,poly3);
     
     context.putImageData(imagedata, 0, 0); // display the image in the context
 }
