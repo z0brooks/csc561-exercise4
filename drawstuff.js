@@ -508,7 +508,7 @@ function main() {
 
     // Get the canvas, context, and image data
     var canvas = document.getElementById("viewport"); 
-    var context = canvas.getContext("2d");
+    var context = canvas.getContext("3d");
     var w = context.canvas.width; // as set in html
     var h = context.canvas.height;  // as set in html
     var imagedata = context.createImageData(w,h);
@@ -529,16 +529,16 @@ function main() {
       //          {x:5,y:15,z:10,c:new Color(255,255,0,255)}, 
         //        {x:5,y:10,z:10,c:new Color(255,0,0,255)}, 
           //      {x:-5,y:5,z:10,c:new Color(255,0,255,255)}];
-    var poly2 = [{x:-5,y:5,z:10,c:new Color(255,0,0,255)}, {x:5,y:5,z:10,c:new Color(0,255,0,255)}, 
-                {x:5,y:-5,z:10,c:new Color(0,0,0,255)}, {x:-5,y:-5,z:10,c:new Color(0,0,255,255)}];
+    var poly2 = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, {x:5,y:-5,z:15,c:new Color(0,255,0,255)}, 
+                {x:5,y:-15,z:15,c:new Color(0,0,0,255)}, {x:-5,y:-15,z:10,c:new Color(0,0,255,255)}];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
     fillPoly(imagedata,poly);
 
     // Add second poly
-    //projectPoly(imagedata,poly2,view);
-    //fillPoly(imagedata,poly2);
+    projectPoly(imagedata,poly2,view);
+    fillPoly(imagedata,poly2);
     
     context.putImageData(imagedata, 0, 0); // display the image in the context
 }
