@@ -525,13 +525,11 @@ function main() {
         {x:-5.5,y:-2,z:10,c:new Color(0,0,255,255)}
     ];
     
-    
-    // Poly 2: Right side (Left edge at z=12, Right edge pushed back to z=18)
     var poly2 = [
-        {x:3,y:3,z:12,c: new Color(255,0,0,255)},
-        {x:8,y:3,z:14,c: new Color(0,255,0,255)},
-        {x:8,y:-2,z:14,c: new Color(0,0,0,255)}, 
-        {x:3,y:-2,z:12,c: new Color(0,0,255,255)}
+        {x:2,y:3,z:12,c:new Color(255,0,0,255)},   
+        {x:9,y:3,z:16,c:new Color(0,255,0,255)},   
+        {x:9,y:-2,z:16,c:new Color(0,0,0,255)},     
+        {x:2,y:-2,z:12,c:new Color(0,0,255,255)}    
     ];
     
     // Define and render a rectangle in 2D with colors and coords at corners
