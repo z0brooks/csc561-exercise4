@@ -508,7 +508,7 @@ function main() {
 
     // Get the canvas, context, and image data
     var canvas = document.getElementById("viewport"); 
-    var context = canvas.getContext("3d");
+    var context = canvas.getContext("2d");
     var w = context.canvas.width; // as set in html
     var h = context.canvas.height;  // as set in html
     var imagedata = context.createImageData(w,h);
