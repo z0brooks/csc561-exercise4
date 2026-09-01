@@ -517,20 +517,20 @@ function main() {
     var testEye = new Vector(0,0,0);
     var testAt = Vector.subtract(new Vector(0,0,10),testEye);
     var view = {eye:testEye, at:testAt, up:new Vector(0,1,0)};
-    var poly = [{x:0,y:0,z:10,c:new Color(0,0,0,255)}, 
-                {x:5,y:5,z:10,c:new Color(0,255,0,255)},
-                {x:10,y:0,z:10,c:new Color(255,0,0,255)}, 
-                {x:5,y:-5,z:10,c:new Color(0,0,255,255)}];
-    //var poly2 = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, 
-      //          {x:5,y:-5,z:10,c:new Color(0,255,0,255)}, 
-        //        {x:5,y:-15,z:10,c:new Color(0,0,0,255)}, 
-          //      {x:-5,y:-15,z:10,c:new Color(0,0,255,255)}];
-    //var poly3 = [{x:-5,y:10,z:10,c:new Color(255,0,0,255)}, 
-      //          {x:5,y:15,z:10,c:new Color(255,255,0,255)}, 
-        //        {x:5,y:10,z:10,c:new Color(255,0,0,255)}, 
-          //      {x:-5,y:5,z:10,c:new Color(255,0,255,255)}];
-    var poly2 = [{x:-5,y:-5,z:10,c:new Color(255,0,0,255)}, {x:5,y:-5,z:15,c:new Color(0,255,0,255)}, 
-                {x:5,y:-15,z:15,c:new Color(0,0,0,255)}, {x:-5,y:-15,z:10,c:new Color(0,0,255,255)}];
+    var poly = [
+        {x: -8, y: 3,  z: 10, c: new Color(255, 0, 0, 255)},
+        {x: -3, y: 3,  z: 10, c: new Color(0, 255, 0, 255)},
+        {x: -3, y: -2, z: 10, c: new Color(0, 0, 255, 255)},
+        {x: -8, y: -2, z: 10, c: new Color(255, 255, 0, 255)}
+    ];
+    
+    // Poly 2: Right side (Left edge at z=12, Right edge pushed back to z=18)
+    var poly2 = [
+        {x: 3,  y: 3,  z: 18, c: new Color(0, 255, 255, 255)},
+        {x: 8,  y: 3,  z: 12, c: new Color(255, 0, 255, 255)},
+        {x: 8,  y: -2, z: 12, c: new Color(255, 255, 255, 255)}, 
+        {x: 3,  y: -2, z: 18, c: new Color(100, 100, 100, 255)}
+    ];
     
     // Define and render a rectangle in 2D with colors and coords at corners
     projectPoly(imagedata,poly,view);
